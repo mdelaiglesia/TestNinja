@@ -66,7 +66,9 @@
         }
 
         function validateCredentials(email, password, result) {
-            var emailPasswordArray = [{ 'email': 'matiasdelaiglesia@gmail.com', 'password': '12345678'}]
+            var emailPasswordArray = [
+                                        { 'email': 'matiasdelaiglesia@gmail.com', 'password': '12345678' }
+                                     ];
             var resultAux = $.grep(emailPasswordArray, function (e) { return e.email == email; });
 
             result.emailFound = resultAux.length === 1;
@@ -80,20 +82,23 @@
     </script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <h1>Hello Ninja!</h1>
     <div class="form-signin">
-        <h2 class="form-signin-heading">
-            Please sign in
-        </h2>
-        <input type="text" class="form-control" placeholder="Email address" autofocus />
-        <input type="password" class="form-control" placeholder="Password" />
-        <label class="checkbox">
-            <input type="checkbox" value="remember-me" />
-            Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" onclick="javascript:submitLogin(); return false;"
-            type="submit">
-            Sign in
-        </button>
+        <div class="highlighted-section">
+            <h2 class="form-signin-heading">
+                Please sign in
+            </h2>
+            <input type="text" class="form-control" placeholder="Email address" autofocus />
+            <input type="password" class="form-control" placeholder="Password" />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" />
+                Remember me
+            </label>
+            <button class="btn btn-lg btn-primary btn-block" onclick="javascript:submitLogin(); return false;"
+                type="submit">
+                Sign in
+            </button>
+        </div>
         <br />
         <div class="alert alert-success" style="display: none">
             <strong>Well done!</strong> You're in!

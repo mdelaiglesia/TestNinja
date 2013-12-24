@@ -65,11 +65,11 @@ namespace Test.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Sign in with empty email")]
+        [NUnit.Framework.DescriptionAttribute("Log in with empty email")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void SignInWithEmptyEmail()
+        public virtual void LogInWithEmptyEmail()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign in with empty email", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log in with empty email", new string[] {
                         "mytag"});
 #line 6
 this.ScenarioSetup(scenarioInfo);

@@ -8,11 +8,26 @@
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- Custom styles for this template -->
     <style type="text/css">
+        html
+        {
+            height: 100%;
+        }
+        
         body
         {
             padding-top: 40px;
-            padding-bottom: 40px;
-            background-color: #eee;
+            background:  url('Content/1 (2).jpg') no-repeat center left;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+            height: auto !important;
+            min-height:100%;
+        }
+        
+        h2
+        {
+            margin-top: 0px;
+            color: #999999;
         }
         
         .form-signin
@@ -28,6 +43,7 @@
         .form-signin .checkbox
         {
             font-weight: normal;
+            color: #999999;
         }
         .form-signin .form-control
         {
@@ -54,6 +70,13 @@
             margin-bottom: 10px;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
+        }
+        .form-signin .highlighted-section
+        {
+            background: white; 
+            padding: 15px; 
+            border: 1px solid #6fa3c4; 
+            border-radius: 4px;
         }
     </style>
     <script type="text/javascript" src="Scripts/jquery-1.9.1.min.js" />
