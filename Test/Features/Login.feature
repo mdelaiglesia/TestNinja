@@ -5,5 +5,5 @@
 @mytag
 Scenario: Log in with empty email
 	Given I am on the log in page
-	When I fill email field with ''
-	Then I should see "I don't know who you are any more."
+	When I submit the log in with email '' and password ''
+	Then I should see "Oh snap! You forgot to enter your email."

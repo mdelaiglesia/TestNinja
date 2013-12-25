@@ -7,25 +7,24 @@
         function submitLogin() {
             $(document).ready(function () {
 
-                $(".alert-success").hide();
-                $(".alert-danger").hide();
+                $("#success").hide();
+                $("#error").hide();
 
-                var email = $("input[type='text']").val();
-                var password = $("input[type='password']").val();
+                var email = $("#email").val();
+                var password = $("#password").val();
                 var error = {};
 
                 var isValidLogin = validateLogin(email, password, error);
                 $("#errorMessage").text(error.message);
 
                 if (isValidLogin) {
-                    $(".alert-success").fadeIn(300);
-                    $(".form-signin").fadeOut(5000);
+                    $("#success").fadeIn(300);
 
-                    $("input[type='text']").val("");
-                    $("input[type='password']").val("");
+                    $("#email").val("");
+                    $("#password").val("");
                 }
                 else {
-                    $(".alert-danger").fadeIn(300);
+                    $("#error").fadeIn(300);
                 }
             });
         }
@@ -82,28 +81,29 @@
     </script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h1>Hello Ninja!</h1>
+    <h1>
+        Hello Ninja!</h1>
     <div class="form-signin">
         <div class="highlighted-section">
             <h2 class="form-signin-heading">
                 Please sign in
             </h2>
-            <input type="text" class="form-control" placeholder="Email address" autofocus />
-            <input type="password" class="form-control" placeholder="Password" />
+            <input id="email" type="text" class="form-control" placeholder="Email address" autofocus />
+            <input id="password" type="password" class="form-control" placeholder="Password" />
             <label class="checkbox">
                 <input type="checkbox" value="remember-me" />
                 Remember me
             </label>
-            <button class="btn btn-lg btn-primary btn-block" onclick="javascript:submitLogin(); return false;"
+            <button id="submit" class="btn btn-lg btn-primary btn-block" onclick="javascript:submitLogin(); return false;"
                 type="submit">
                 Sign in
             </button>
         </div>
         <br />
-        <div class="alert alert-success" style="display: none">
+        <div id="success" class="alert alert-success" style="display: none">
             <strong>Well done!</strong> You're in!
         </div>
-        <div class="alert alert-danger" style="display: none">
+        <div id="error" class="alert alert-danger" style="display: none">
             <strong>Oh snap! </strong>
             <p id="errorMessage" style="display: inline" />
         </div>
