@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Página principal" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+﻿<%@ Page Title="Hello Ninja!" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="Web._Default" EnableViewState="true" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
