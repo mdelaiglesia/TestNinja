@@ -13,6 +13,8 @@ namespace Test.Pages
         public string ErrorMessage { get { return error.Text; } }
         public string SuccessMessage { get { return success.Text; } }
 
+        #region Elements
+
         [FindsBy(How = How.Id, Using = "email")]
         private IWebElement email;
 
@@ -28,10 +30,9 @@ namespace Test.Pages
         [FindsBy(How = How.Id, Using = "error")]
         private IWebElement error;
 
-        public LoginPage(IWebDriver driver)
-        {
+        #endregion
 
-        }
+        public LoginPage(IWebDriver driver) { }
 
         public LoginPage LoginAs(string email, string password)
         {
