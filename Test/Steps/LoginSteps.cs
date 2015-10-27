@@ -5,6 +5,7 @@ using OpenQA.Selenium.Chrome;
 using Test.Pages;
 using OpenQA.Selenium.Support.PageObjects;
 using NUnit.Framework;
+using System.Threading;
 
 namespace Test.Steps
 {
@@ -45,6 +46,8 @@ namespace Test.Steps
         [Then(@"I should see ""(.*)""")]
         public void ThenIShouldSee(string loginResult)
         {
+            Thread.Sleep(1999);
+
             if (loginPage.HasErrors)
             {
                 Assert.AreEqual(loginResult, loginPage.ErrorMessage);
